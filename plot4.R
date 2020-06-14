@@ -8,7 +8,7 @@ data <- data %>%
   mutate(Date = ymd(Date),Time = hms(Time))
 
 #plot4
-png("plot4.png")
+png("plot4.png")# note that the default width and height are already 480
 par(mfrow=c(2,2),mar=c(4,4,2,2),oma=c(1,1,1,1))
 #added margins and how to add -- row wise
 with(data,plot(Date+Time,Global_active_power,type = "l",
