@@ -7,7 +7,7 @@ data <- data %>%
   mutate(Date = ymd(Date),Time = hms(Time))
 
 #plot3
-png("plot3.png")
+png("plot3.png")# note that the default width and height are already 480
 with(data,plot(Date+Time,Sub_metering_1,type = "n",ylab="Energy sub metering",xlab=""))
 #created empty plot frame!
 with(data,points(Date+Time,Sub_metering_1,type = "l"))
