@@ -7,7 +7,7 @@ data <- data %>%
   mutate(Date = ymd(Date),Time = hms(Time))
 
 #plot2
-png("plot2.png")
+png("plot2.png")# note that the default width and height are already 480
 with(data,plot(Date+Time,Global_active_power,type = "l",
                ylab = "Global Active Power (kilowatts)",xlab=""))
 dev.off()
