@@ -9,7 +9,7 @@ data <- data %>%
         mutate(Date = ymd(Date),Time = hms(Time))
 
 #plot1
-png("plot1.png")
+png("plot1.png")# note that the default width and height are already 480
 hist(data$Global_active_power,xlab="Global Active Power (kilowatts)",
      ylab="Frequency",main="Global Active Power",col="red")
 dev.off()
